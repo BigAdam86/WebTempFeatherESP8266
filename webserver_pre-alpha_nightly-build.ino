@@ -3,7 +3,7 @@
 #include <ESP8266WebServer.h>
 #include <ESP8266mDNS.h>
 
-const char* ssid = "Nackademin Guest GB"; //Glöm inte att ändra SSID och PASSWORD!
+const char* ssid = "Nackademin Guest GB"; //GlÃ¶m inte att Ã¤ndra SSID och PASSWORD!
 const char* password = "SnartSommar!";
 const int sensorPin = A0;
 const float baselineTemp = 20.0;
@@ -12,7 +12,7 @@ const float baselineTemp = 20.0;
 ESP8266WebServer server(80);
 
 void sendMessage() {
-  server.send(200, "text/plain; charset=UTF-8", "Temp: " ); // Koden för att skriva ut temperaturen på hemsidan är inte komplett, temp-output saknas!
+  server.send(200, "text/plain; charset=UTF-8", "Temp: " ); // Koden fÃ¶r att skriva ut temperaturen pÃ¥ hemsidan Ã¤r inte komplett, temp-output saknas!
     }   
 
 void handleNotFound() {
@@ -57,7 +57,7 @@ void loop() {
   Serial.print("Sensor Value: ");
   Serial.println(sensorVal);
 
-  float voltage = (sensorVal/1024.0) * 3.3; //Det är här någonstans det börjar bli fel i koden! Får sjukt höga temperaturer. Osäker på vad det är som strular! Felsökning pågår :)
+  float voltage = (sensorVal/1024.0) * 3.3; //Det Ã¤r hÃ¤r nÃ¥gonstans det bÃ¶rjar bli fel i koden! FÃ¥r sjukt hÃ¶ga temperaturer. OsÃ¤ker pÃ¥ vad det Ã¤r som strular! FelsÃ¶kning pÃ¥gÃ¥r :)
 
   Serial.print("Volts: ");
   Serial.println(voltage);
